@@ -1,5 +1,5 @@
 package com.gatc.terminal;
 
 public interface DeleteFile {
-    void deleteFile();
+    void deleteFile(String x);
 }

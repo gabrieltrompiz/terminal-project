@@ -1,5 +1,5 @@
 package com.gatc.terminal;
 
 public interface WriteTxt {
-    void writeText();
+    void writeText(String x);
 }

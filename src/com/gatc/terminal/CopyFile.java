@@ -1,5 +1,5 @@
 package com.gatc.terminal;
 
 public interface CopyFile {
-    void copyFile();
+    void copyFile(String x);
 }

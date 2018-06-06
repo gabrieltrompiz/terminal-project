@@ -1,5 +1,5 @@
 package com.gatc.terminal;
 
 public interface MoveDir {
-    void moveDirectory();
+    void moveDirectory(String x);
 }

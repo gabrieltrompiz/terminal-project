@@ -3,36 +3,36 @@ package com.gatc.terminal;
 public class UnixSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, MoveDir, MoveFile, WriteTxt{
 
 
-    public void copyFile()
+    public void copyFile(String cmd)
     {
     }
 
-    public void createDirectory()
-    {
-
-    }
-
-    public void deleteFile()
+    public void createDirectory(String cmd)
     {
 
     }
 
-    public void listDirectories()
+    public void deleteFile(String cmd)
     {
 
     }
 
-    public void moveDirectory()
+    public void listDirectories(String cmd)
     {
 
     }
 
-    public void moveFile()
+    public void moveDirectory(String cmd)
     {
 
     }
 
-    public void writeText()
+    public void moveFile(String cmd)
+    {
+
+    }
+
+    public void writeText(String cmd)
     {
 
     }
