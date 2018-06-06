@@ -13,6 +13,8 @@ public class Main {
 
         switch (choice){
             case 1:
+                WindowsSyntax winSyn = new WindowsSyntax();
+                winSyn.runWin();
                 break;
 
             case 2:
