@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb485eb4-feb2-448b-a17c-6dbc38c6efd0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/Terminal/com/gatc/terminal/WindowsSyntax.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Terminal/com/gatc/terminal/WindowsSyntax.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Terminal/com/gatc/terminal/WindowsSyntax.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gatc/terminal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/terminal/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gatc/terminal/WindowsSyntax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/terminal/WindowsSyntax.java" afterDir="false" />
     </list>
@@ -19,8 +20,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+            <state relative-caret-position="510">
+              <caret line="30" column="62" selection-start-line="30" selection-start-column="62" selection-end-line="30" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -28,8 +29,8 @@
       <file leaf-file-name="WindowsSyntax.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/WindowsSyntax.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="79" column="9" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
+            <state relative-caret-position="1377">
+              <caret line="81" column="47" selection-start-line="81" selection-start-column="47" selection-end-line="81" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -40,7 +41,7 @@
       <file leaf-file-name="UnixSyntax.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/UnixSyntax.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
+            <state relative-caret-position="490">
               <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
             </state>
           </provider>
@@ -236,15 +237,16 @@
       <option name="presentableId" value="Default" />
       <updated>1528313721283</updated>
       <workItem from="1528313728159" duration="2527000" />
-      <workItem from="1528316284477" duration="22232000" />
+      <workItem from="1528316284477" duration="23162000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24759000" />
+    <option name="totallyTimeSpent" value="25689000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -255,7 +257,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32827586" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30206898" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30206898" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32880846" />
       <window_info id="Capture Tool" order="2" />
@@ -340,13 +342,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/UnixSyntax.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aaa">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -355,15 +350,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        <state relative-caret-position="510">
+          <caret line="30" column="62" selection-start-line="30" selection-start-column="62" selection-end-line="30" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/UnixSyntax.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/WindowsSyntax.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="79" column="9" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
+        <state relative-caret-position="1377">
+          <caret line="81" column="47" selection-start-line="81" selection-start-column="47" selection-end-line="81" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

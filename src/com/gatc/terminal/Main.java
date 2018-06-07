@@ -6,23 +6,31 @@ public class Main {
 
     public static void main(String args[]){
 
-        System.out.println("1. Windows Syntax");
-        System.out.println("2. Unix Syntax");
-        Scanner sc = new Scanner(System.in);
-        int choice = sc.nextInt();
+        int choice;
 
-        switch (choice){
-            case 1:
-                WindowsSyntax winSyn = new WindowsSyntax();
-                winSyn.runWin();
-                break;
+        do {
+            System.out.println("1. Windows Syntax");
+            System.out.println("2. Unix Syntax");
+            System.out.println("0. Salir");
+            Scanner sc = new Scanner(System.in);
+            choice = sc.nextInt();
 
-            case 2:
-                UnixSyntax uniSyn = new UnixSyntax();
-                break;
+            switch (choice) {
+                case 1:
+                    WindowsSyntax winSyn = new WindowsSyntax();
+                    winSyn.runWin();
+                    break;
 
-            default:
-                break;
-        }
+                case 2:
+                    UnixSyntax uniSyn = new UnixSyntax();
+                    break;
+
+                case 0:
+                    System.exit(0);
+                default:
+                    System.out.print("Select a valid option.\n");
+                    break;
+            }
+        }while(choice != 0);
     }
 }

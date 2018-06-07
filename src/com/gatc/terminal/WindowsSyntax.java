@@ -22,23 +22,26 @@ public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, 
             if (command.startsWith("copy"))
                 copyFile(command);
 
-            if (command.startsWith("mkdir"))
+            else if (command.startsWith("mkdir"))
                 createDirectory(command);
 
-            if (command.startsWith("del"))
+            else if (command.startsWith("del"))
                 deleteFile(command);
 
-            if (command.startsWith("dir"))
+            else if (command.startsWith("dir"))
                 listDirectories(command);
 
-            if (command.startsWith("cd"))
+            else if (command.startsWith("cd"))
                 moveDirectory(command);
 
-            if (command.startsWith("move"))
+            else if (command.startsWith("move"))
                 moveFile(command);
 
-            if (command.startsWith("echo") && command.contains(">>"))
+            else if (command.startsWith("echo") && command.contains(">>"))
                 writeText(command);
+
+            else
+                System.out.print("'" + command + "' is not recognized as a command.\n");
 
         } while (!command.equals("exit"));
         System.exit(0);
@@ -49,7 +52,7 @@ public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, 
         cmd = cmd.trim().replaceAll(" +", " "); //Replace multiple spaces to one space
         String[] cmdParts = cmd.split(" "); //Separates cmd into parts. [0] is command, [1] source, [2] destination
 
-        if (cmdParts.length != 3){
+        if (cmdParts.length != 3){ //Must have 3 parts.
             System.out.println("Copy command must have 2 arguments.");
             return;
         }
@@ -76,7 +79,7 @@ public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, 
             Files.copy(sourceFile, destinationFile, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.COPY_ATTRIBUTES);
         }
         catch (IOException e) {
-            System.out.println("Not valid Path.");
+            System.out.println("Not valid path."); //Exception when path (source or dest) can't be found.
         }
     }
 
