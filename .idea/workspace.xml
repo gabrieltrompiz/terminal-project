@@ -2,27 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb485eb4-feb2-448b-a17c-6dbc38c6efd0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Terminal/com/gatc/terminal/CopyFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Terminal/com/gatc/terminal/CopyFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Terminal/com/gatc/terminal/CreateDir.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Terminal/com/gatc/terminal/DeleteFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Terminal/com/gatc/terminal/ListDir.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Terminal/com/gatc/terminal/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Terminal/com/gatc/terminal/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Terminal/com/gatc/terminal/MoveDir.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Terminal/com/gatc/terminal/MoveFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Terminal/com/gatc/terminal/UnixSyntax.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Terminal/com/gatc/terminal/WindowsSyntax.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Terminal/com/gatc/terminal/WriteTxt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gatc/terminal/CopyFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/terminal/CopyFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gatc/terminal/CreateDir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/terminal/CreateDir.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gatc/terminal/DeleteFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/terminal/DeleteFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gatc/terminal/ListDir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/terminal/ListDir.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gatc/terminal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/terminal/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gatc/terminal/MoveDir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/terminal/MoveDir.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gatc/terminal/MoveFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/terminal/MoveFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gatc/terminal/UnixSyntax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/terminal/UnixSyntax.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gatc/terminal/WindowsSyntax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/terminal/WindowsSyntax.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gatc/terminal/WriteTxt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/terminal/WriteTxt.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,8 +19,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
+            <state relative-caret-position="34">
+              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -46,8 +28,8 @@
       <file leaf-file-name="WindowsSyntax.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/WindowsSyntax.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-54">
-              <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+            <state relative-caret-position="314">
+              <caret line="79" column="9" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,69 +42,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="578">
               <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MoveDir.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/MoveDir.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WriteTxt.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/WriteTxt.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ListDir.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/ListDir.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateDir.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/CreateDir.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CopyFile.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/CopyFile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MoveFile.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/MoveFile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeleteFile.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/DeleteFile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -151,7 +70,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/gatc/terminal/Main.java" />
         <option value="$PROJECT_DIR$/src/com/gatc/terminal/UnixSyntax.java" />
         <option value="$PROJECT_DIR$/src/com/gatc/terminal/WriteTxt.java" />
         <option value="$PROJECT_DIR$/src/com/gatc/terminal/ListDir.java" />
@@ -160,6 +78,7 @@
         <option value="$PROJECT_DIR$/src/com/gatc/terminal/MoveFile.java" />
         <option value="$PROJECT_DIR$/src/com/gatc/terminal/DeleteFile.java" />
         <option value="$PROJECT_DIR$/src/com/gatc/terminal/MoveDir.java" />
+        <option value="$PROJECT_DIR$/src/com/gatc/terminal/Main.java" />
         <option value="$PROJECT_DIR$/src/com/gatc/terminal/WindowsSyntax.java" />
       </list>
     </option>
@@ -225,6 +144,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Dev\Java Workspace\Terminal\src\com\gatc\terminal" />
       <recent name="D:\Dev\Java Workspace" />
     </key>
   </component>
@@ -240,7 +160,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Build">
     <configuration name="Build" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.gatc.terminal.Main" />
       <module name="Terminal" />
@@ -265,6 +185,12 @@
       </option>
       <patterns />
     </configuration>
+    <configuration name="commons-io-2.6.jar (1)" type="JarApplication" factoryName="JAR Application" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/src/com/gatc/terminal/commons-io-2.6.jar" />
+    </configuration>
+    <configuration name="commons-io-2.6.jar" type="JarApplication" factoryName="JAR Application" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/commons-io-2.6.jar" />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -287,6 +213,17 @@
       <properties />
       <listeners />
     </configuration>
+    <list>
+      <item itemvalue="Application.Build" />
+      <item itemvalue="JAR Application.commons-io-2.6.jar" />
+      <item itemvalue="JAR Application.commons-io-2.6.jar (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JAR Application.commons-io-2.6.jar (1)" />
+        <item itemvalue="JAR Application.commons-io-2.6.jar" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -299,12 +236,12 @@
       <option name="presentableId" value="Default" />
       <updated>1528313721283</updated>
       <workItem from="1528313728159" duration="2527000" />
-      <workItem from="1528316284477" duration="10388000" />
+      <workItem from="1528316284477" duration="22232000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12915000" />
+    <option name="totallyTimeSpent" value="24759000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -315,15 +252,15 @@
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32880846" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32827586" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30206898" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30206898" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32880846" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24963924" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24934895" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -347,20 +284,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://D:/Java Workspace/Terminal/src/com/gatc/terminal/Main.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/UnixSyntax.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/WriteTxt.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -410,10 +333,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/jre/lib/rt.jar!/sun/nio/fs/WindowsFileSystemProvider.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="243" selection-start-line="243" selection-end-line="243" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/UnixSyntax.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aaa">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/calo">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/WindowsSyntax.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-54">
-          <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+        <state relative-caret-position="314">
+          <caret line="79" column="9" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

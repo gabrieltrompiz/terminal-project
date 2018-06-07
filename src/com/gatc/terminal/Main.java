@@ -1,6 +1,6 @@
 package com.gatc.terminal;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class Main {
 
