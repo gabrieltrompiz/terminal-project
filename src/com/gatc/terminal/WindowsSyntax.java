@@ -79,7 +79,7 @@ public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, 
             Files.copy(sourceFile, destinationFile, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.COPY_ATTRIBUTES);
         }
         catch (IOException e) {
-            System.out.println("Not valid path."); //Exception when path (source or dest) can't be found.
+            System.out.println("Invalid path."); //Exception when path (source or dest) can't be found.
         }
     }
 
