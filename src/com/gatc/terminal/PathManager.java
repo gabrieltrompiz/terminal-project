@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-@SuppressWarnings("Duplicates")
+@SuppressWarnings({"Duplicates", "WeakerAccess"})
 
 public class PathManager {
 
@@ -48,8 +48,8 @@ public class PathManager {
             sourceArray = sourceList.toArray(sourceArray);
             StringBuilder sbSource = new StringBuilder();
 
-            for (int i = 0; i < sourceArray.length; i++){
-                sbSource.append(sourceArray[i] + "\\");
+            for (String i : sourceArray){
+                sbSource.append(i).append("\\");
             }
             sbSource.deleteCharAt(sbSource.length() - 1);
             sourcePath = sbSource.toString();
@@ -69,8 +69,8 @@ public class PathManager {
 
             StringBuilder sbDestination = new StringBuilder();
 
-            for (int i = 0; i < destinationArray.length; i++){
-                sbDestination.append(destinationArray[i] + "\\");
+            for (String i : destinationArray){
+                sbDestination.append(i).append("\\");
             }
             sbDestination.deleteCharAt(sbDestination.length() - 1);
             destinationPath = sbDestination.toString();
@@ -83,6 +83,39 @@ public class PathManager {
     }
 
     public String[] pathManager(String currentPath, String uniquePath) {
+        if (uniquePath.contains(":\\")){
+            destinationPath = uniquePath;
+        }
+        else{
+            destinationPath = currentPath + "\\" + uniquePath;
+        }
+
+        if (destinationPath.contains("..")){
+            List<String> destinationList = new LinkedList<>(Arrays.asList(destinationPath.split("\\\\")));
+
+            while (destinationList.contains("..")){
+                index = destinationList.indexOf("..");
+                destinationList.remove(index);
+                destinationList.remove(index - 1);
+            }
+
+            String[] destinationArray = new String[destinationList.size()];
+            destinationArray = destinationList.toArray(destinationArray);
+
+            StringBuilder sbDestination = new StringBuilder();
+
+            for (String i : destinationArray){
+                sbDestination.append(i).append("\\");
+            }
+            sbDestination.deleteCharAt(sbDestination.length() - 1);
+            destinationPath = sbDestination.toString();
+        }
+
+        if (destinationPath.contains("\\\\")) {
+            destinationPath = destinationPath.replaceAll("\\\\+", "\\\\");
+        }
+
+        cmdArguments[0] = destinationPath;
         return cmdArguments;
     }
 }

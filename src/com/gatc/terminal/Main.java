@@ -31,6 +31,6 @@ public class Main {
                     System.out.print("Select a valid option.\n");
                     break;
             }
-        }while(choice != 0);
+        }while(true);
     }
 }

@@ -5,7 +5,9 @@ import java.nio.file.*;
 import java.util.Scanner;
 import java.io.*;
 
-public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, MoveDir, MoveFile, WriteTxt{
+@SuppressWarnings("WeakerAccess")
+
+public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, ChangeDir, MoveFile, WriteTxt{
 
     private String currentPath = "D:\\Dev";
     private String command;
@@ -16,7 +18,7 @@ public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, 
         Scanner sc = new Scanner(System.in);
 
         do {
-            System.out.println(currentPath);
+            System.out.println(currentPath + " >");
             command = sc.nextLine();
             command = command.trim().replaceAll(" +", " "); //Replace multiple spaces to one space
             cmdParts = command.split(" "); //Separates cmd into parts. [0] is command, [1] source, [2] destination
@@ -63,7 +65,7 @@ public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, 
 
                 case "cd":
                   if (cmdParts.length == 2) {
-                      moveDirectory(cmdParts[1]);
+                      changeDirectory(cmdParts[1]);
                   }
                   else {
                       System.out.println("'cd' command requires one destination path.");
@@ -138,9 +140,21 @@ public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, 
 
     }
 
-    public void moveDirectory(String path)
+    public void changeDirectory(String path)
     {
+        PathManager toPath = new PathManager();
+        processedPaths = toPath.pathManager(currentPath, path);
+        Path existentPath = Paths.get(processedPaths[0]);
 
+        if (Files.exists(existentPath)) {
+            currentPath = processedPaths[0];
+            if (currentPath.contains(":") && (currentPath.length() == 2)) {
+                currentPath += "\\";
+            }
+        }
+        else {
+            System.out.print("Invalid path.\n");
+        }
     }
 
     public void moveFile(String source, String destination)
