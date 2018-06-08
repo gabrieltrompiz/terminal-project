@@ -1,14 +1,13 @@
 package com.gatc.terminal;
 
-import sun.java2d.pipe.SpanShapeRenderer;
-
 import java.lang.*;
 import java.nio.file.*;
-import java.text.SimpleDateFormat;
 import java.util.Scanner;
 import java.io.*;
+//import java.text.SimpleDateFormat;
+//import java.util.Date;
 
-@SuppressWarnings("WeakerAccess")
+@SuppressWarnings({"WeakerAccess", "Duplicates"})
 
 public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, ChangeDir, MoveFile, WriteTxt{
 
@@ -32,7 +31,7 @@ public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, 
                         copyFile(cmdParts[1], cmdParts[2]);
                     }
                     else{
-                        System.out.println("'copy' commands requires one source and one destination paths.");
+                        System.out.println("'copy' commands requires one source and one destination path.");
                     }
                    break;
 
@@ -58,11 +57,8 @@ public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, 
                   if (cmdParts.length == 1) {
                       listDirectories();
                   }
-                  else if (cmdParts.length == 2) {
-                      listDirectories(cmdParts[1]);
-                  }
                   else {
-                      System.out.println("'mkdir' command only accepts one destination");
+                      System.out.println("'mkdir' command doesn't take arguments.");
                   }
                   break;
 
@@ -138,22 +134,22 @@ public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, 
     {
         File toPath = new File(currentPath);
         String[] directories = toPath.list();
+
         for (String directory : directories){
             String pathname = currentPath + "\\" + directory;
             File files = new File(pathname);
-            String format = "%-21s%-8s%s%n";
-            SimpleDateFormat lastMod = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-            if (files.isDirectory()) {
-                System.out.printf(format, lastMod.format(files.lastModified()), "<DIR>", directory);
+            String format = "%-8s%s%n";
+
+            //Date lastMod = new Date();
+            //lastMod.setTime(files.lastModified());
+
+            if (files.isDirectory() && !files.isHidden()) {
+                System.out.printf(format, "<DIR>", directory);
             }
-            else {
-                System.out.printf(lastMod.format(files.lastModified()), "<FILE>", directory);
+            else if (!files.isHidden()) {
+                System.out.printf(format, "<FILE>", directory);
             }
         }
-    }
-
-    public void listDirectories(String destination){
-
     }
 
     public void changeDirectory(String path)
