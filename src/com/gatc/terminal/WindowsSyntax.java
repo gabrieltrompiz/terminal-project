@@ -1,7 +1,10 @@
 package com.gatc.terminal;
 
+import sun.java2d.pipe.SpanShapeRenderer;
+
 import java.lang.*;
 import java.nio.file.*;
+import java.text.SimpleDateFormat;
 import java.util.Scanner;
 import java.io.*;
 
@@ -133,7 +136,20 @@ public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, 
 
     public void listDirectories()
     {
-
+        File toPath = new File(currentPath);
+        String[] directories = toPath.list();
+        for (String directory : directories){
+            String pathname = currentPath + "\\" + directory;
+            File files = new File(pathname);
+            String format = "%-21s%-8s%s%n";
+            SimpleDateFormat lastMod = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+            if (files.isDirectory()) {
+                System.out.printf(format, lastMod.format(files.lastModified()), "<DIR>", directory);
+            }
+            else {
+                System.out.printf(lastMod.format(files.lastModified()), "<FILE>", directory);
+            }
+        }
     }
 
     public void listDirectories(String destination){

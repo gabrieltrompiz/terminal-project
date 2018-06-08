@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb485eb4-feb2-448b-a17c-6dbc38c6efd0" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/out/production/Terminal/com/gatc/terminal/WindowsSyntax.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gatc/terminal/WindowsSyntax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/terminal/WindowsSyntax.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -30,8 +31,8 @@
       <file leaf-file-name="WindowsSyntax.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/WindowsSyntax.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="172" column="89" selection-start-line="172" selection-start-column="89" selection-end-line="172" selection-end-column="89" />
+            <state relative-caret-position="107">
+              <caret line="143" column="33" selection-start-line="143" selection-start-column="33" selection-end-line="143" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#117#150#0" expanded="true" />
@@ -252,12 +253,12 @@
       <workItem from="1528313728159" duration="2527000" />
       <workItem from="1528316284477" duration="23162000" />
       <workItem from="1528382902492" duration="1351000" />
-      <workItem from="1528392052867" duration="22965000" />
+      <workItem from="1528392052867" duration="25616000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50005000" />
+    <option name="totallyTimeSpent" value="52656000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -273,7 +274,7 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30206898" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.6289655" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32880846" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -432,10 +433,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/io/FileFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/WindowsSyntax.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="172" column="89" selection-start-line="172" selection-start-column="89" selection-end-line="172" selection-end-column="89" />
+        <state relative-caret-position="107">
+          <caret line="143" column="33" selection-start-line="143" selection-start-column="33" selection-end-line="143" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#117#150#0" expanded="true" />
