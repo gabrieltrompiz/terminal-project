@@ -22,7 +22,6 @@ public class Main {
                     break;
 
                 case 2:
-                    UnixSyntax uniSyn = new UnixSyntax();
                     break;
 
                 case 0:

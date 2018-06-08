@@ -9,7 +9,7 @@ public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, 
 
     private String currentPath = "D:\\Dev";
     private String command;
-    private String[] processedPaths;
+    private String[] processedPaths, cmdParts;
     private int index;
 
     public void runWin() {
@@ -18,48 +18,91 @@ public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, 
         do {
             System.out.println(currentPath);
             command = sc.nextLine();
-            command = command.trim();
+            command = command.trim().replaceAll(" +", " "); //Replace multiple spaces to one space
+            cmdParts = command.split(" "); //Separates cmd into parts. [0] is command, [1] source, [2] destination
 
-            if (command.startsWith("copy"))
-                copyFile(command);
+            switch (cmdParts[0]) {
+                case "copy":
+                    if (cmdParts.length == 3) {
+                        copyFile(cmdParts[1], cmdParts[2]);
+                    }
+                    else{
+                        System.out.println("'copy' commands requires one source and one destination paths.");
+                    }
+                   break;
 
-            else if (command.startsWith("mkdir"))
-                createDirectory(command);
+                case "mkdir":
+                    if (cmdParts.length == 2) {
+                        createDirectory(cmdParts[1]);
+                    }
+                    else {
+                        System.out.println("'mkdir' command requires one destination path.");
+                    }
+                    break;
 
-            else if (command.startsWith("del"))
-                deleteFile(command);
+                case "del":
+                    if (cmdParts.length == 2) {
+                        deleteFile(cmdParts[1]);
+                    }
+                    else {
+                        System.out.println("'del' command requires one destination path.");
+                    }
+                  break;
 
-            else if (command.startsWith("dir"))
-                listDirectories(command);
+                case "dir":
+                  if (cmdParts.length == 1) {
+                      listDirectories();
+                  }
+                  else if (cmdParts.length == 2) {
+                      listDirectories(cmdParts[1]);
+                  }
+                  else {
+                      System.out.println("'mkdir' command only accepts one destination");
+                  }
+                  break;
 
-            else if (command.startsWith("cd"))
-                moveDirectory(command);
+                case "cd":
+                  if (cmdParts.length == 2) {
+                      moveDirectory(cmdParts[1]);
+                  }
+                  else {
+                      System.out.println("'cd' command requires one destination path.");
+                  }
+                  break;
 
-            else if (command.startsWith("move"))
-                moveFile(command);
+                case "move":
+                    if (cmdParts.length == 3) {
+                        moveFile(cmdParts[1], cmdParts[2]);
+                    }
+                    else {
+                        System.out.println("'move' command requires one source and one destination paths");
+                    }
+                    break;
 
-            else if (command.startsWith("echo") && command.contains(">>"))
-                writeText(command);
+                case "echo":
+                    if (cmdParts.length == 4) {
+                        writeText(cmdParts[1], cmdParts[2], cmdParts[3]);
+                    }
+                    else {
+                        System.out.println("aaaa");
+                    }
+                    break;
 
-            else
-                System.out.print("'" + command + "' is not recognized as a command.\n");
+                case "exit":
+                    break;
 
-        } while (!command.equals("exit"));
+                default:
+                    System.out.println("'" + cmdParts[0] + "' is not recognized as a command. \n");
+            }
+
+        } while (!cmdParts[0].equals("exit"));
         System.exit(0);
     }
 
-    public void copyFile(String cmd)
+    public void copyFile(String source, String destination)
     {
-        cmd = cmd.trim().replaceAll(" +", " "); //Replace multiple spaces to one space
-        String[] cmdParts = cmd.split(" "); //Separates cmd into parts. [0] is command, [1] source, [2] destination
-
-        if (cmdParts.length != 3){ //Must have 3 parts.
-            System.out.println("Copy command must have 2 arguments.");
-            return;
-        }
-
         PathManager path = new PathManager();
-        processedPaths = path.pathManager(currentPath, cmdParts[1], cmdParts[2]);
+        processedPaths = path.pathManager(currentPath, source, destination);
 
         index = processedPaths[0].lastIndexOf("\\");
 
@@ -76,32 +119,36 @@ public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, 
         }
     }
 
-    public void createDirectory(String cmd)
+    public void createDirectory(String path)
     {
 
     }
 
-    public void deleteFile(String cmd)
+    public void deleteFile(String path)
     {
 
     }
 
-    public void listDirectories(String cmd)
+    public void listDirectories()
     {
 
     }
 
-    public void moveDirectory(String cmd)
+    public void listDirectories(String destination){
+
+    }
+
+    public void moveDirectory(String path)
     {
 
     }
 
-    public void moveFile(String cmd)
+    public void moveFile(String source, String destination)
     {
 
     }
 
-    public void writeText(String cmd)
+    public void writeText(String text, String operand, String destination)
     {
 
     }
