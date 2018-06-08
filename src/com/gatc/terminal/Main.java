@@ -27,6 +27,7 @@ public class Main {
 
                 case 0:
                     System.exit(0);
+
                 default:
                     System.out.print("Select a valid option.\n");
                     break;

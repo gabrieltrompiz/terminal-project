@@ -7,9 +7,10 @@ import java.io.*;
 
 public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, MoveDir, MoveFile, WriteTxt{
 
-    String currentPath = "D:\\Dev";
-    String command, sourcePath, destinationPath;
-    int index;
+    private String currentPath = "D:\\Dev";
+    private String command;
+    private String[] processedPaths;
+    private int index;
 
     public void runWin() {
         Scanner sc = new Scanner(System.in);
@@ -56,24 +57,16 @@ public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, 
             System.out.println("Copy command must have 2 arguments.");
             return;
         }
-        if (cmdParts[1].contains("\\")){
-            sourcePath = cmdParts[1];
-            index = sourcePath.lastIndexOf("\\");
-            if (!cmdParts[2].contains(":\\"))
-               destinationPath = currentPath + "\\" + cmdParts[2] + "\\" + cmdParts[1].substring(index);
-            else
-                destinationPath = cmdParts[2] + "\\" + cmdParts[1].substring(index);
-        }
-        else{
-            sourcePath = (currentPath + "\\" + cmdParts[1]);
-            if (cmdParts[2].contains(":\\"))
-                 destinationPath = (cmdParts[2] + "\\" + cmdParts[1].substring(index));
-            else
-                destinationPath = currentPath + "\\" + cmdParts[2] + "\\" + cmdParts[1].substring(index);
-        }
 
-        Path sourceFile = Paths.get(sourcePath);
-        Path destinationFile = Paths.get(destinationPath);
+        PathManager path = new PathManager();
+        processedPaths = path.pathManager(currentPath, cmdParts[1], cmdParts[2]);
+
+        index = processedPaths[0].lastIndexOf("\\");
+
+        processedPaths[1] = processedPaths[1] + "\\" + processedPaths[0].substring(index);
+
+        Path sourceFile = Paths.get(processedPaths[0]);
+        Path destinationFile = Paths.get(processedPaths[1]);
 
         try {
             Files.copy(sourceFile, destinationFile, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.COPY_ATTRIBUTES);
