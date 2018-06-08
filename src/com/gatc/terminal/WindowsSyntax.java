@@ -159,7 +159,22 @@ public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, 
 
     public void moveFile(String source, String destination)
     {
+        PathManager path = new PathManager();
+        processedPaths = path.pathManager(currentPath, source, destination);
 
+        index = processedPaths[0].lastIndexOf("\\");
+
+        processedPaths[1] = processedPaths[1] + "\\" + processedPaths[0].substring(index);
+
+        Path sourceFile = Paths.get(processedPaths[0]);
+        Path destinationFile = Paths.get(processedPaths[1]);
+
+        try {
+            Files.move(sourceFile, destinationFile, StandardCopyOption.REPLACE_EXISTING);
+        }
+        catch (IOException e) {
+            System.out.println("Invalid path."); //Exception when path (source or dest) can't be found.
+        }
     }
 
     public void writeText(String text, String operand, String destination)
