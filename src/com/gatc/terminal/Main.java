@@ -22,15 +22,15 @@ public class Main {
                     break;
 
                 case 2:
-                    UnixSyntax uniSyn = new UnixSyntax();
                     break;
 
                 case 0:
                     System.exit(0);
+
                 default:
                     System.out.print("Select a valid option.\n");
                     break;
             }
-        }while(choice != 0);
+        }while(true);
     }
 }
