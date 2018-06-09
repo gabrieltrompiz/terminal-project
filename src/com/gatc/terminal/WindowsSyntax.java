@@ -11,7 +11,7 @@ import java.io.*;
 
 public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, ChangeDir, MoveFile, WriteTxt{
 
-    protected String currentPath = "D:\\Dev";
+    protected String currentPath = System.getProperty("user.home");
     protected String command;
     protected String[] processedPaths, cmdParts;
     protected int index;
@@ -82,6 +82,7 @@ public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, 
 
                 case "echo":
                     break;
+
 
                 case "exit":
                     break;
@@ -190,6 +191,7 @@ public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, 
 
     public void changeDirectory(String path)
     {
+
         PathManager toPath = new PathManager();
         processedPaths = toPath.pathManager(currentPath, path);
         Path existentPath = Paths.get(processedPaths[0]);
