@@ -58,7 +58,7 @@ public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, 
                       listDirectories();
                   }
                   else {
-                      System.out.println("'mkdir' command doesn't take arguments.");
+                      System.out.println("'dir' command doesn't take arguments.");
                   }
                   break;
 
@@ -122,12 +122,37 @@ public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, 
 
     public void createDirectory(String path)
     {
+        PathManager toPath = new PathManager();
+        processedPaths = toPath.pathManager(currentPath, path);
 
+        File files = new File(processedPaths[0]);
+
+        if (!files.exists()) {
+            new File(processedPaths[0]).mkdirs();
+        }
+        else {
+            System.out.println("Directory already exists.");
+        }
     }
 
     public void deleteFile(String path)
     {
+        PathManager toPath = new PathManager();
+        processedPaths = toPath.pathManager(currentPath, path);
 
+        File files = new File(processedPaths[0]);
+        Path pathname = Paths.get(processedPaths[0]);
+
+        if (!files.isDirectory()) {
+            try {
+                Files.delete(pathname);
+            } catch (Exception e) {
+                System.out.println("Invalid path."); //Exception when path (source or dest) can't be found.
+            }
+        }
+        else {
+            System.out.println("Cannot delete directories with 'del' command.");
+        }
     }
 
     public void listDirectories()
@@ -165,7 +190,7 @@ public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, 
             }
         }
         else {
-            System.out.print("Invalid path.\n");
+            System.out.print("'" + processedPaths[0] + "' path doesn't exists.\n");
         }
     }
 
