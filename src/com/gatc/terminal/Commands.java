@@ -9,25 +9,13 @@ import java.io.*;
 
 @SuppressWarnings({"WeakerAccess", "Duplicates"})
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, ChangeDir, MoveFile, WriteTxt{
-=======
 public class Commands implements CopyFile, CreateDir, DeleteFile, ListDir, ChangeDir, MoveFile, WriteTxt{
->>>>>>> Stashed changes
-=======
-public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, ChangeDir, MoveFile, WriteTxt{
->>>>>>> test3
 
     protected String currentPath = System.getProperty("user.home");
     protected String command;
     protected String[] processedPaths, cmdParts;
     protected int index;
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
->>>>>>> test3
     public void runWin() {
         Scanner sc = new Scanner(System.in);
 
@@ -107,11 +95,6 @@ public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, 
         System.exit(0);
     }
 
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> test3
     public void copyFile(String source, String destination)
     {
         PathManager path = new PathManager();

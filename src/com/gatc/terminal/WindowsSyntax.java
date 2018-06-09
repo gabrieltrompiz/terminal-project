@@ -1,9 +1,5 @@
 package com.gatc.terminal;
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-public class WindowsSyntax {
-=======
 import java.util.Scanner;
 
 public class WindowsSyntax extends Commands{
@@ -85,9 +81,5 @@ public class WindowsSyntax extends Commands{
         } while (!cmdParts[0].equals("exit"));
         System.exit(0);
     }
->>>>>>> Stashed changes
-=======
-public class WindowsSyntax {
->>>>>>> test3
 }
 
