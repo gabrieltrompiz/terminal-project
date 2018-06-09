@@ -7,95 +7,16 @@ import java.io.*;
 //import java.text.SimpleDateFormat;
 //import java.util.Date;
 
-public class Commands implements CopyFile, CreateDir, DeleteFile, ListDir, ChangeDir, MoveFile, WriteTxt{
+public class Commands{
 
-    protected String currentPath = System.getProperty("user.home");
-    protected String command;
-    protected String[] processedPaths, cmdParts;
-    protected int index;
+    String currentPath = System.getProperty("user.home");
+    String command;
+    String[] processedPaths, cmdParts;
+    int index;
+    PathManager path = new PathManager();
 
-    public void runWin() {
-        Scanner sc = new Scanner(System.in);
-
-        do {
-            System.out.println(currentPath + " >");
-            command = sc.nextLine();
-            command = command.trim().replaceAll(" +", " "); //Replace multiple spaces to one space
-            cmdParts = command.split(" "); //Separates cmd into parts. [0] is command, [1] source, [2] destination
-
-            switch (cmdParts[0]) {
-                case "copy":
-                    if (cmdParts.length == 3) {
-                        copyFile(cmdParts[1], cmdParts[2]);
-                    }
-                    else{
-                        System.out.println("'copy' commands requires one source and one destination path.");
-                    }
-                   break;
-
-                case "mkdir":
-                    if (cmdParts.length == 2) {
-                        createDirectory(cmdParts[1]);
-                    }
-                    else {
-                        System.out.println("'mkdir' command requires one destination path.");
-                    }
-                    break;
-
-                case "del":
-                    if (cmdParts.length == 2) {
-                        deleteFile(cmdParts[1]);
-                    }
-                    else {
-                        System.out.println("'del' command requires one destination path.");
-                    }
-                  break;
-
-                case "dir":
-                  if (cmdParts.length == 1) {
-                      listDirectories();
-                  }
-                  else {
-                      System.out.println("'dir' command doesn't take arguments.");
-                  }
-                  break;
-
-                case "cd":
-                  if (cmdParts.length == 2) {
-                      changeDirectory(cmdParts[1]);
-                  }
-                  else {
-                      System.out.println("'cd' command requires one destination path.");
-                  }
-                  break;
-
-                case "move":
-                    if (cmdParts.length == 3) {
-                        moveFile(cmdParts[1], cmdParts[2]);
-                    }
-                    else {
-                        System.out.println("'move' command requires one source and one destination paths");
-                    }
-                    break;
-
-                case "echo":
-                    break;
-
-
-                case "exit":
-                    break;
-
-                default:
-                    System.out.println("'" + cmdParts[0] + "' is not recognized as a command. \n");
-            }
-
-        } while (!cmdParts[0].equals("exit"));
-        System.exit(0);
-    }
-
-    public void copyFile(String source, String destination)
+    void copyFile(String source, String destination)
     {
-        PathManager path = new PathManager();
         processedPaths = path.pathManager(currentPath, source, destination);
 
         index = processedPaths[0].lastIndexOf("\\");
@@ -113,10 +34,9 @@ public class Commands implements CopyFile, CreateDir, DeleteFile, ListDir, Chang
         }
     }
 
-    public void createDirectory(String path)
+    void createDirectory(String paths)
     {
-        PathManager toPath = new PathManager();
-        processedPaths = toPath.pathManager(currentPath, path);
+        processedPaths = path.pathManager(currentPath, paths);
         File files = new File(processedPaths[0]);
 
         if (files.exists()) {
@@ -145,10 +65,9 @@ public class Commands implements CopyFile, CreateDir, DeleteFile, ListDir, Chang
         }
     }
 
-    public void deleteFile(String path)
+    void deleteFile(String paths)
     {
-        PathManager toPath = new PathManager();
-        processedPaths = toPath.pathManager(currentPath, path);
+        processedPaths = path.pathManager(currentPath, paths);
 
         File files = new File(processedPaths[0]);
         Path pathname = Paths.get(processedPaths[0]);
@@ -165,7 +84,7 @@ public class Commands implements CopyFile, CreateDir, DeleteFile, ListDir, Chang
         }
     }
 
-    public void listDirectories()
+    void listDirectories()
     {
         File toPath = new File(currentPath);
         String[] directories = toPath.list();
@@ -187,11 +106,9 @@ public class Commands implements CopyFile, CreateDir, DeleteFile, ListDir, Chang
         }
     }
 
-    public void changeDirectory(String path)
+    void changeDirectory(String paths)
     {
-
-        PathManager toPath = new PathManager();
-        processedPaths = toPath.pathManager(currentPath, path);
+        processedPaths = path.pathManager(currentPath, paths);
         Path existentPath = Paths.get(processedPaths[0]);
 
         if (Files.exists(existentPath)) {
@@ -205,9 +122,8 @@ public class Commands implements CopyFile, CreateDir, DeleteFile, ListDir, Chang
         }
     }
 
-    public void moveFile(String source, String destination)
+    void moveFile(String source, String destination)
     {
-        PathManager path = new PathManager();
         processedPaths = path.pathManager(currentPath, source, destination);
 
         index = processedPaths[0].lastIndexOf("\\");
