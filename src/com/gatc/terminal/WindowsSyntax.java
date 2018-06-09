@@ -124,14 +124,28 @@ public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, 
     {
         PathManager toPath = new PathManager();
         processedPaths = toPath.pathManager(currentPath, path);
-
         File files = new File(processedPaths[0]);
 
-        if (!files.exists()) {
-            new File(processedPaths[0]).mkdirs();
+        if (files.exists()) {
+            for (int i = 1; i < 100; i++) {
+                files = new File(processedPaths[0] + "(" + Integer.toString(i) + ")");
+                if (!files.exists()) {
+                    System.out.println("Directory already exists. Want to create a directory named '" +
+                    files.getName() + "'? (y/n)");
+                    Scanner sc = new Scanner(System.in);
+                    char option = sc.next().charAt(0);
+                    if (option == 'y') {
+                        new File(processedPaths[0].substring(0, processedPaths[0].lastIndexOf("\\")) + "\\" + files.getName()).mkdirs();
+                        break;
+                    }
+                    else {
+                        break;
+                    }
+                }
+            }
         }
         else {
-            System.out.println("Directory already exists.");
+            new File(files.getName());
         }
     }
 

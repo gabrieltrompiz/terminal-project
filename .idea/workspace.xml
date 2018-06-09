@@ -30,8 +30,8 @@
       <file leaf-file-name="WindowsSyntax.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/WindowsSyntax.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-29">
-              <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
+            <state relative-caret-position="362">
+              <caret line="137" column="99" selection-start-line="137" selection-start-column="99" selection-end-line="137" selection-end-column="99" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#195#244#0" expanded="true" />
@@ -44,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/PathManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1210">
-              <caret line="15" column="82" lean-forward="true" selection-start-line="15" selection-start-column="82" selection-end-line="15" selection-end-column="82" />
+              <caret line="15" column="82" selection-start-line="15" selection-start-column="82" selection-end-line="15" selection-end-column="82" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -251,15 +251,16 @@
       <workItem from="1528313728159" duration="2527000" />
       <workItem from="1528316284477" duration="23162000" />
       <workItem from="1528382902492" duration="1351000" />
-      <workItem from="1528392052867" duration="30757000" />
+      <workItem from="1528392052867" duration="32389000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57797000" />
+    <option name="totallyTimeSpent" value="59429000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -429,7 +430,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/PathManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1210">
-          <caret line="15" column="82" lean-forward="true" selection-start-line="15" selection-start-column="82" selection-end-line="15" selection-end-column="82" />
+          <caret line="15" column="82" selection-start-line="15" selection-start-column="82" selection-end-line="15" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -438,8 +439,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/WindowsSyntax.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-29">
-          <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
+        <state relative-caret-position="362">
+          <caret line="137" column="99" selection-start-line="137" selection-start-column="99" selection-end-line="137" selection-end-column="99" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#195#244#0" expanded="true" />
