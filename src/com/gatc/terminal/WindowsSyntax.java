@@ -1,5 +1,6 @@
 package com.gatc.terminal;
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 public class WindowsSyntax {
 =======
@@ -85,5 +86,8 @@ public class WindowsSyntax extends Commands{
         System.exit(0);
     }
 >>>>>>> Stashed changes
+=======
+public class WindowsSyntax {
+>>>>>>> test3
 }
 
