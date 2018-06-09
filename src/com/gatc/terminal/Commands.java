@@ -7,8 +7,6 @@ import java.io.*;
 //import java.text.SimpleDateFormat;
 //import java.util.Date;
 
-@SuppressWarnings({"WeakerAccess", "Duplicates"})
-
 public class Commands implements CopyFile, CreateDir, DeleteFile, ListDir, ChangeDir, MoveFile, WriteTxt{
 
     protected String currentPath = System.getProperty("user.home");

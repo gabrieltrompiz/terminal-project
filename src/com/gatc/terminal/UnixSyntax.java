@@ -2,8 +2,6 @@ package com.gatc.terminal;
 
 import java.util.Scanner;
 
-@SuppressWarnings("Duplicates")
-
 public class UnixSyntax extends Commands {
 
     public void runUnix() {
