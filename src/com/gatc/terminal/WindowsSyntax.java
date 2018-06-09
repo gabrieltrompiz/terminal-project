@@ -11,10 +11,10 @@ import java.io.*;
 
 public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, ChangeDir, MoveFile, WriteTxt{
 
-    private String currentPath = "D:\\Dev";
-    private String command;
-    private String[] processedPaths, cmdParts;
-    private int index;
+    protected String currentPath = "D:\\Dev";
+    protected String command;
+    protected String[] processedPaths, cmdParts;
+    protected int index;
 
     public void runWin() {
         Scanner sc = new Scanner(System.in);
@@ -81,12 +81,6 @@ public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, 
                     break;
 
                 case "echo":
-                    if (cmdParts.length == 4) {
-                        writeText(cmdParts[1], cmdParts[2], cmdParts[3]);
-                    }
-                    else {
-                        System.out.println("aaaa");
-                    }
                     break;
 
                 case "exit":
@@ -132,10 +126,13 @@ public class WindowsSyntax implements CopyFile, CreateDir, DeleteFile, ListDir, 
                 if (!files.exists()) {
                     System.out.println("Directory already exists. Want to create a directory named '" +
                     files.getName() + "'? (y/n)");
+
                     Scanner sc = new Scanner(System.in);
                     char option = sc.next().charAt(0);
+
                     if (option == 'y') {
-                        new File(processedPaths[0].substring(0, processedPaths[0].lastIndexOf("\\")) + "\\" + files.getName()).mkdirs();
+                        new File(processedPaths[0].substring(0, processedPaths[0].lastIndexOf("\\"))
+                        + "\\" + files.getName()).mkdirs();
                         break;
                     }
                     else {

@@ -8,10 +8,10 @@ import java.util.List;
 
 public class PathManager {
 
-    private String sourcePath;
-    private String destinationPath;
-    private String[] cmdArguments = new String[2];
-    private int index;
+    protected String sourcePath;
+    protected String destinationPath;
+    protected String[] cmdArguments = new String[2];
+    protected int index;
 
     public String[] pathManager(String currentPath, String source, String destination){
         if (source.contains("\\")){
