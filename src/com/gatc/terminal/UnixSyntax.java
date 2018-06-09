@@ -8,7 +8,9 @@ public class UnixSyntax extends Commands {
         Scanner sc = new Scanner(System.in);
 
         do {
-            System.out.println(currentPath + " >");
+            StringBuilder unixTransformation = new StringBuilder(currentPath);
+            unixTransformation.replace(0,2,"~");
+            System.out.println(unixTransformation.toString() + " >");
             command = sc.nextLine();
             command = command.trim().replaceAll(" +", " "); //Replace multiple spaces to one space
             cmdParts = command.split(" "); //Separates cmd into parts. [0] is command, [1] source, [2] destination

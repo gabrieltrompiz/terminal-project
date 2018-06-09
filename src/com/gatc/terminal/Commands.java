@@ -11,9 +11,10 @@ public class Commands{
 
     String currentPath = System.getProperty("user.home");
     String command;
-    String[] processedPaths, cmdParts;
-    int index;
-    PathManager path = new PathManager();
+    String[] cmdParts;
+    private String[] processedPaths;
+    private int index;
+    private PathManager path = new PathManager();
 
     void copyFile(String source, String destination)
     {
