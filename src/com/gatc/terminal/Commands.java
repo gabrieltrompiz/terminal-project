@@ -5,13 +5,10 @@ import java.nio.file.*;
 import java.text.SimpleDateFormat;
 import java.util.Scanner;
 import java.io.*;
-//import java.text.SimpleDateFormat;
-//import java.util.Date;
 
 public class Commands{
 
-    String currentPath = System.getProperty("user.home");
-    String command;
+    String currentPath = System.getProperty("user.home"); //To make it get a valid path in any computer (D:/Dev may not exist in another computer)
     String[] cmdParts;
     private String[] processedPaths;
     private int index;
@@ -21,7 +18,7 @@ public class Commands{
     {
         processedPaths = path.pathManager(currentPath, source, destination);
 
-        index = processedPaths[0].lastIndexOf("\\");
+        index = processedPaths[0].lastIndexOf("\\");  //Takes the index where filename starts. NIO requires it on destination path
 
         processedPaths[1] = processedPaths[1] + "\\" + processedPaths[0].substring(index);
 
@@ -74,7 +71,7 @@ public class Commands{
         File files = new File(processedPaths[0]);
         Path pathname = Paths.get(processedPaths[0]);
 
-        if (!files.isDirectory()) {
+        if (!files.isDirectory()) { //Check if file is a directory
             try {
                 Files.delete(pathname);
             } catch (Exception e) {
@@ -94,7 +91,7 @@ public class Commands{
         for (String directory : directories){
             String pathname = currentPath + "\\" + directory;
             File files = new File(pathname);
-            String format = "%-8s%-22s%s%n";
+            String format = "%-8s%-22s%s%n"; //Formatting
 
             SimpleDateFormat sdf = new SimpleDateFormat("dd\\MM\\yyyy HH:mm:ss");
             File file = new File(pathname);
@@ -115,12 +112,12 @@ public class Commands{
 
         if (Files.exists(existentPath)) {
             currentPath = processedPaths[0];
-            if (currentPath.contains(":") && (currentPath.length() == 2)) {
+            if (currentPath.contains(":") && (currentPath.length() == 2)) { //Without this paths like D:/ would be shown like D:
                 currentPath += "\\";
             }
         }
         else {
-            System.out.print("'" + processedPaths[0] + "' path doesn't exists.\n");
+            System.out.print("'" + processedPaths[0] + "' path doesn't exists.\n"); //Handling invalid path
         }
     }
 

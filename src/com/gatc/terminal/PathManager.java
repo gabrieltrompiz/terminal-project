@@ -13,9 +13,9 @@ public class PathManager {
     protected String[] cmdArguments = new String[2];
     protected int index;
 
-    public String[] pathManager(String currentPath, String source, String destination){
+    public String[] pathManager(String currentPath, String source, String destination){ //Receives current path, source and destination
         if (source.contains("\\")){
-            if (source.contains(":\\")){
+            if (source.contains(":\\")){ //If path is something like D:/
                 sourcePath = source;
             }
             else{
@@ -26,8 +26,6 @@ public class PathManager {
             sourcePath = currentPath + "\\" + source;
         }
 
-        index = sourcePath.lastIndexOf("\\");
-
         if (destination.contains(":\\")){
             destinationPath = destination;
         }
@@ -36,8 +34,8 @@ public class PathManager {
         }
 
         if (sourcePath.contains("..")) {
-            List<String>  sourceList = new LinkedList<>(Arrays.asList(sourcePath.split("\\\\")));
-
+            List<String>  sourceList = new LinkedList<>(Arrays.asList(sourcePath.split("\\\\"))); //Creates modifiable list of the path
+                                                                                                        //.asList() method returns unmodifiable list
             while (sourceList.contains("..")){
                 index = sourceList.indexOf("..");
                 sourceList.remove(index);
@@ -82,7 +80,8 @@ public class PathManager {
         return cmdArguments;
     }
 
-    public String[] pathManager(String currentPath, String uniquePath) {
+    public String[] pathManager(String currentPath, String uniquePath) { //Receives current path and unique path (commands like delete and create
+                                                                        // file only requires one path)
         if (uniquePath.contains(":\\")){
             destinationPath = uniquePath;
         }

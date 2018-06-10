@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="bb485eb4-feb2-448b-a17c-6dbc38c6efd0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/com/gatc/terminal/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/terminal/Commands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gatc/terminal/PathManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/terminal/PathManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gatc/terminal/Syntax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/terminal/Syntax.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/PathManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+              <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -39,11 +41,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Syntax.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/Syntax.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-782">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Commands.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/Commands.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="105" column="72" selection-start-line="105" selection-start-column="72" selection-end-line="105" selection-end-column="72" />
+            <state relative-caret-position="357">
+              <caret line="114" column="121" selection-start-line="114" selection-start-column="121" selection-end-line="114" selection-end-column="121" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,9 +102,9 @@
         <option value="$PROJECT_DIR$/src/com/gatc/terminal/CreateDir.java" />
         <option value="$PROJECT_DIR$/src/com/gatc/terminal/CopyFile.java" />
         <option value="$PROJECT_DIR$/src/com/gatc/terminal/UnixSyntax.java" />
-        <option value="$PROJECT_DIR$/src/com/gatc/terminal/PathManager.java" />
-        <option value="$PROJECT_DIR$/src/com/gatc/terminal/Syntax.java" />
         <option value="$PROJECT_DIR$/src/com/gatc/terminal/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/gatc/terminal/Syntax.java" />
+        <option value="$PROJECT_DIR$/src/com/gatc/terminal/PathManager.java" />
         <option value="$PROJECT_DIR$/src/com/gatc/terminal/Commands.java" />
       </list>
     </option>
@@ -175,7 +186,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Build">
+  <component name="RunManager">
     <configuration name="Build" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.gatc.terminal.Main" />
       <module name="Terminal" />
@@ -200,12 +211,6 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="commons-io-2.6.jar (1)" type="JarApplication" factoryName="JAR Application" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/src/com/gatc/terminal/commons-io-2.6.jar" />
-    </configuration>
-    <configuration name="commons-io-2.6.jar" type="JarApplication" factoryName="JAR Application" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/commons-io-2.6.jar" />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -228,17 +233,6 @@
       <properties />
       <listeners />
     </configuration>
-    <list>
-      <item itemvalue="Application.Build" />
-      <item itemvalue="JAR Application.commons-io-2.6.jar" />
-      <item itemvalue="JAR Application.commons-io-2.6.jar (1)" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JAR Application.commons-io-2.6.jar (1)" />
-        <item itemvalue="JAR Application.commons-io-2.6.jar" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -259,7 +253,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67782000" />
+    <option name="totallyTimeSpent" value="68695000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -498,27 +492,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/Syntax.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="26" lean-forward="true" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/PathManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/Syntax.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-782">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gatc/terminal/Commands.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="105" column="72" selection-start-line="105" selection-start-column="72" selection-end-line="105" selection-end-column="72" />
+        <state relative-caret-position="357">
+          <caret line="114" column="121" selection-start-line="114" selection-start-column="121" selection-end-line="114" selection-end-column="121" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -4,14 +4,13 @@ import java.util.Scanner;
 
 public class Syntax extends Commands {
 
-    Scanner sc = new Scanner(System.in);
     String command;
 
     public void runUnix() {
         Scanner sc = new Scanner(System.in);
 
         do {
-            System.out.println(currentPath + " >");
+            System.out.println(currentPath + " >"); //Prints current path after every command
             command = sc.nextLine();
             command = command.trim().replaceAll(" +", " "); //Replace multiple spaces to one space
             cmdParts = command.split(" "); //Separates cmd into parts. [0] is command, [1] source, [2] destination
