@@ -85,28 +85,31 @@ public class Commands{
 
     void listDirectories()
     {
-        boolean hasContent = false;
         File toPath = new File(currentPath);
         String[] directories = toPath.list();
+
+        if (directories.length == 0) {
+            System.out.printf("Directory is empty.\n");
+            return;
+        }
+
+        String format = "%-8s%-22s%s%n"; //Formatting
+        System.out.printf(format, "Type", "Last Time Modified", "Name");
 
         for (String directory : directories){
             String pathname = currentPath + "\\" + directory;
             File files = new File(pathname);
-            String format = "%-8s%-22s%s%n"; //Formatting
 
             SimpleDateFormat sdf = new SimpleDateFormat("dd\\MM\\yyyy HH:mm:ss");
             File file = new File(pathname);
 
-            if (files.isDirectory() && !files.isHidden()) { //I'm not showing hidden files ok?
-                hasContent = true;
+            if (files.isDirectory() && !files.isHidden()) { //I'm not showing you hidden files ok?
+
                 System.out.printf(format, "<DIR>", sdf.format(file.lastModified()), directory);
             }
             else if (!files.isHidden()) {
                 System.out.printf(format, "<FILE>", sdf.format(file.lastModified()), directory);
             }
-        }
-        if (!hasContent) {
-            System.out.println("Empty directory.");
         }
     }
 
@@ -145,7 +148,7 @@ public class Commands{
         }
     }
 
-    public void writeText(String text, String operand, String destination)
+    public void writeText()
     {
 
     }
