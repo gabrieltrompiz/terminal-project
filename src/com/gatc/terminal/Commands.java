@@ -39,7 +39,7 @@ public class Commands{
         File files = new File(processedPaths[0]);
 
         if (files.exists()) {
-            for (int i = 1; i < 100; i++) {
+            for (int i = 1; i < 100; i++) { //If directory already exists search for a valid directory name following directory(n) format
                 files = new File(processedPaths[0] + "(" + Integer.toString(i) + ")");
                 if (!files.exists()) {
                     System.out.println("Directory already exists. Want to create a directory named '" +
@@ -60,7 +60,7 @@ public class Commands{
             }
         }
         else {
-            new File(files.getName());
+            new File(processedPaths[0]).mkdirs();
         }
     }
 
@@ -85,6 +85,7 @@ public class Commands{
 
     void listDirectories()
     {
+        boolean hasContent = false;
         File toPath = new File(currentPath);
         String[] directories = toPath.list();
 
@@ -96,12 +97,16 @@ public class Commands{
             SimpleDateFormat sdf = new SimpleDateFormat("dd\\MM\\yyyy HH:mm:ss");
             File file = new File(pathname);
 
-            if (files.isDirectory() && !files.isHidden()) {
+            if (files.isDirectory() && !files.isHidden()) { //I'm not showing hidden files ok?
+                hasContent = true;
                 System.out.printf(format, "<DIR>", sdf.format(file.lastModified()), directory);
             }
             else if (!files.isHidden()) {
                 System.out.printf(format, "<FILE>", sdf.format(file.lastModified()), directory);
             }
+        }
+        if (!hasContent) {
+            System.out.println("Empty directory.");
         }
     }
 
