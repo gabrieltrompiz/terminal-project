@@ -2,6 +2,7 @@ package com.gatc.terminal;
 
 import java.lang.*;
 import java.nio.file.*;
+import java.text.SimpleDateFormat;
 import java.util.Scanner;
 import java.io.*;
 //import java.text.SimpleDateFormat;
@@ -93,16 +94,16 @@ public class Commands{
         for (String directory : directories){
             String pathname = currentPath + "\\" + directory;
             File files = new File(pathname);
-            String format = "%-8s%s%n";
+            String format = "%-8s%-22s%s%n";
 
-            //Date lastMod = new Date();
-            //lastMod.setTime(files.lastModified());
+            SimpleDateFormat sdf = new SimpleDateFormat("dd\\MM\\yyyy HH:mm:ss");
+            File file = new File(pathname);
 
             if (files.isDirectory() && !files.isHidden()) {
-                System.out.printf(format, "<DIR>", directory);
+                System.out.printf(format, "<DIR>", sdf.format(file.lastModified()), directory);
             }
             else if (!files.isHidden()) {
-                System.out.printf(format, "<FILE>", directory);
+                System.out.printf(format, "<FILE>", sdf.format(file.lastModified()), directory);
             }
         }
     }
