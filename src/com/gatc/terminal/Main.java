@@ -22,12 +22,12 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    Syntax winSyn = new Syntax();
+                    WindowsSyntax winSyn = new WindowsSyntax();
                     winSyn.runWin();
                     break;
 
                 case 2:
-                    Syntax unixSyn = new Syntax();
+                    UnixSyntax unixSyn = new UnixSyntax();
                     unixSyn.runUnix();
                     break;
 

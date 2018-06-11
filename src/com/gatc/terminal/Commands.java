@@ -7,11 +7,14 @@ import java.util.Scanner;
 import java.io.*;
 import org.apache.commons.io.*;
 
+@SuppressWarnings({"Duplicates", "WeakerAccess"})
+
 public class Commands{
 
-    // String currentPath = System.getProperty("user.home"); //To make it get a valid path in any computer (D:/Dev may not exist in another computer)
+    // String currentPath = System.getProperty("user.home"); //To make it get a valid path in any computer (D:\Dev may not exist in another computer)
     String currentPath = "D:\\Dev\\Dummy"; //Safety first <3
     String[] cmdParts;
+    String command;
     private String[] processedPaths;
     private int index;
     private PathManager path = new PathManager();
@@ -96,7 +99,6 @@ public class Commands{
         }
 
         String format = "%-8s%-22s%s%n"; //Formatting
-        System.out.println("Directory of " + currentPath + "\n");
         System.out.printf(format, "Type", "Last Time Modified", "Name");
 
         for (String directory : directories){
@@ -176,7 +178,7 @@ public class Commands{
         }
     }
 
-    void deleteFolder(String paths)
+    public void deleteFolder(String paths)
     {
         processedPaths = path.pathManager(currentPath, paths);
         Path existentPath = Paths.get(processedPaths[0]);
@@ -197,6 +199,33 @@ public class Commands{
         }
         else {
             System.out.println(processedPaths[0] + " is not a directory.");
+        }
+    }
+
+    public void createTxt(String[] paths)
+    {
+        StringBuilder content = new StringBuilder();
+        for (String string : paths) {
+            if (content.length() > 0){
+                content.append(" ");
+            }
+            content.append(string);
+        }
+
+        if (content.toString().contains(">>")) {
+            String[] contentAndPath = content.toString().split(">>");
+            contentAndPath[0] = contentAndPath[0].replace("echo ", "");
+            contentAndPath[1] = contentAndPath[1].trim();
+            processedPaths = path.pathManager(currentPath, contentAndPath[1]);
+
+            try (BufferedWriter bw = new BufferedWriter(new FileWriter(processedPaths[0], true))) {
+                bw.write(contentAndPath[0]);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        else {
+            System.out.println(content.toString().replace("echo ", ""));
         }
     }
 }

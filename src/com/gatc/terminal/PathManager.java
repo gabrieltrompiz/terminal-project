@@ -34,7 +34,7 @@ public class PathManager {
         }
 
         if (sourcePath.contains("..")) {
-            List<String>  sourceList = new LinkedList<>(Arrays.asList(sourcePath.split("\\\\"))); //Creates modifiable list of the path
+            List<String> sourceList = new LinkedList<>(Arrays.asList(sourcePath.split("\\\\"))); //Creates modifiable list of the path
                                                                                                         //.asList() method returns unmodifiable list
             while (sourceList.contains("..")){
                 index = sourceList.indexOf("..");
