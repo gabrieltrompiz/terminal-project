@@ -5,14 +5,17 @@ import java.nio.file.*;
 import java.text.SimpleDateFormat;
 import java.util.Scanner;
 import java.io.*;
+import org.apache.commons.io.*;
 
 public class Commands{
 
-    String currentPath = System.getProperty("user.home"); //To make it get a valid path in any computer (D:/Dev may not exist in another computer)
+    // String currentPath = System.getProperty("user.home"); //To make it get a valid path in any computer (D:/Dev may not exist in another computer)
+    String currentPath = "D:\\Dev\\Dummy"; //Safety first <3
     String[] cmdParts;
     private String[] processedPaths;
     private int index;
     private PathManager path = new PathManager();
+    Scanner sc = new Scanner(System.in);
 
     void copyFile(String source, String destination)
     {
@@ -45,7 +48,6 @@ public class Commands{
                     System.out.println("Directory already exists. Want to create a directory named '" +
                     files.getName() + "'? (y/n)");
 
-                    Scanner sc = new Scanner(System.in);
                     char option = sc.next().charAt(0);
 
                     if (option == 'y') {
@@ -79,7 +81,7 @@ public class Commands{
             }
         }
         else {
-            System.out.println("Cannot delete directories with 'del' command.");
+            System.out.println("Cannot delete directories with this command.");
         }
     }
 
@@ -89,11 +91,12 @@ public class Commands{
         String[] directories = toPath.list();
 
         if (directories.length == 0) {
-            System.out.printf("Directory is empty.\n");
+            System.out.println("Directory is empty.\n");
             return;
         }
 
         String format = "%-8s%-22s%s%n"; //Formatting
+        System.out.println("Directory of " + currentPath + "\n");
         System.out.printf(format, "Type", "Last Time Modified", "Name");
 
         for (String directory : directories){
@@ -148,8 +151,52 @@ public class Commands{
         }
     }
 
-    public void writeText()
+    public void readText(String paths)
     {
+        processedPaths = path.pathManager(currentPath, paths);
+        File file = new File(processedPaths[0]);
+        Path existentPath = Paths.get(processedPaths[0]);
 
+        if (Files.exists(existentPath)) {
+            if (Files.isReadable(existentPath)) {
+                try {
+                    String content = FileUtils.readFileToString(file, "utf-8");
+                    System.out.println(content);
+                }
+                catch (IOException e) {
+                    System.out.println(processedPaths[0] + " exists but is a directory. \n");
+                }
+            }
+            else {
+                System.out.println(processedPaths[0] + " is not readable. \n");
+            }
+        }
+        else {
+            System.out.println(processedPaths[0] + " doesn't exists. \n");
+        }
+    }
+
+    void deleteFolder(String paths)
+    {
+        processedPaths = path.pathManager(currentPath, paths);
+        Path existentPath = Paths.get(processedPaths[0]);
+        File file = new File(processedPaths[0]);
+
+        if (Files.isDirectory(existentPath)) {
+            System.out.println("Are you sure you want to delete directory '" + processedPaths[0] + "'? This operation is destructive and can't be undone (y/n):");
+            char option = sc.next().charAt(0);
+
+            if (option == 'y') {
+                try {
+                    FileUtils.deleteDirectory(file);
+                }
+                catch(IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        else {
+            System.out.println(processedPaths[0] + " is not a directory.");
+        }
     }
 }

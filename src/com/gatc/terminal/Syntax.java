@@ -35,11 +35,14 @@ public class Syntax extends Commands {
                     break;
 
                 case "rm":
-                    if (cmdParts.length == 2) {
+                    if (cmdParts.length == 2 && !cmdParts[0].contains("-rf")) {
                         deleteFile(cmdParts[1]);
                     }
+                    else if (cmdParts.length == 3 && cmdParts[1] == "-rf"){
+                        deleteFolder(cmdParts[2]);
+                    }
                     else {
-                        System.out.println("'rm' command requires one destination path.");
+                      System.out.println("'rm' command requires one destination path.");
                     }
                     break;
 
@@ -70,8 +73,16 @@ public class Syntax extends Commands {
                     }
                     break;
 
-                case "echo":
+                case "more":
+                case "cat":
+                    if (cmdParts.length == 2) {
+                        readText(cmdParts[1]);
+                    }
+                    else {
+                        System.out.println("'more' command requires one destination path.");
+                    }
                     break;
+
 
                 case "exit":
                     break;
@@ -148,7 +159,22 @@ public class Syntax extends Commands {
                     }
                     break;
 
-                case "echo":
+                case "rmdir":
+                    if (cmdParts.length == 2) {
+                        deleteFolder(cmdParts[1]);
+                    }
+                    else {
+                        System.out.println("'rmdir' command requires one destination path.");
+                    }
+                    break;
+
+                case "more":
+                    if (cmdParts.length == 2) {
+                        readText(cmdParts[1]);
+                    }
+                    else {
+                        System.out.println("'more' command requires one destination path.");
+                    }
                     break;
 
                 case "exit":
@@ -156,6 +182,7 @@ public class Syntax extends Commands {
 
                 default:
                     System.out.println("'" + cmdParts[0] + "' is not recognized as a command. \n");
+                    break;
             }
 
         } while (!cmdParts[0].equals("exit"));

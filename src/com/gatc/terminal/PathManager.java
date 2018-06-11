@@ -111,7 +111,7 @@ public class PathManager {
         }
 
         if (destinationPath.contains("\\\\")) {
-            destinationPath = destinationPath.replaceAll("\\\\+", "\\\\");
+            destinationPath = destinationPath.replaceAll("\\\\+", "\\\\"); //Sometimes it returns something like D:\\Dev
         }
 
         cmdArguments[0] = destinationPath;
